@@ -30,7 +30,7 @@ To run tests, please follow these steps:
    1. Go to https://expo.dev/tools#client
    2. Click "Apple .ipa archive" in the following text: "Download the Android .apk archive or the Apple .ipa archive.". It should start a download
    3. Unzip the downloaded file. Rename it to Exponent.app.
-   4. Put this file (Exponent.app) into the /bin directory in this repository.
+   4. Put this file (Exponent.app) into the /bin directory in this repository. If /bin directory does not exists - create it in main directory (in same place where you have in. 'types', 'e2e', 'components', 'app' directories.
    5. Run the following command in the terminal: `npx expo prebuild` - it will create /ios and /android directories
    6. Run the following command in the terminal: `npx detox build --configuration ios.sim.release` - it will create a release build of the application. (it might take a while)
    7. When build is finished, start the tests by running the following command in your CLI: `npm run test` - it will start the test scenarios using a simulator. 
