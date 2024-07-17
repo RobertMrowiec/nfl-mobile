@@ -7,7 +7,7 @@ export interface Player {
 	college: string;
 	position: string;
 	depth_chart_order: any;
-	competitions: any[];
+	competitions?: any[];
 	last_name: string;
 	player_id: string;
 	fantasy_data_id: number;
@@ -18,14 +18,16 @@ export interface Player {
 	oddsjam_id: any;
 	first_name: string;
 	weight: string;
-	fantasy_positions: string[];
+	fantasy_positions?: string[];
 	injury_body_part: any;
 	sportradar_id: string;
 	rotowire_id: number;
 	height: string;
 	sport: string;
 	birth_city: any;
-	metadata: any;
+	metadata?: {
+		channel_id: string;
+	};
 	status: string;
 	number: number;
 	stats_id: number;

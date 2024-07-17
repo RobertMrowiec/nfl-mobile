@@ -9,7 +9,11 @@ import { fixPlayerHeight } from "../helpers/index";
 const PlayerCard = ({ player, index }: { player: Player; index: number }) => {
 	return (
 		<Link
-			href={{ pathname: `/players/${player.player_id}`, params: { ...player } }}
+			// href={{ pathname: `/players/${player.player_id}`, params: { ...player } }} - we can always put the whole player object here in case
+			href={{
+				pathname: `/players/[id]`,
+				params: { id: player.player_id },
+			}}
 			asChild
 		>
 			<Pressable>
